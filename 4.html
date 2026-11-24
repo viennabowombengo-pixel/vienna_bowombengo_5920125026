@@ -1,17 +1,25 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <title>HTML5 header and footer example</title> 
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/
+html4/strict.dtd"> 
+<html> 
+<head> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
+<title>Form Test</title> 
 </head> 
 <body> 
-<header> 
-<h1>Welcome to the Future World of HTML5.</h1> 
-<h2>Don't be scared it isn't that hard!</h2> 
-</header> 
-<p>Some body content here.</p> 
-<p>Some more body content here.</p> 
-<footer> 
- <p>Content of this example is not under copyright.</p> 
-</footer> 
+<form action="dosomething.php" 
+      method="post" name="testform" onsubmit="return validate();"> 
+<div> 
+ <label><strong>Username:</strong> 
+  <input type="text" name="username"> 
+ </label> 
+ <br> 
+ <label><strong>Comments:</strong> 
+   <textarea name="comments" cols="30" rows="8"></textarea> 
+ </label> 
+ <br> 
+ <input type="submit" value="send"> 
+ <input type="reset" value="clear"> 
+</div> 
+</form> 
 </body> 
 </html>
