@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drawing V</title>
+</head>
+
+<body>
+
+    <canvas id="canvas" width="300" height="250"></canvas>
+
+    <script>
+        window.onload = function() {
+            var canvas = document.getElementById("canvas");
+            var context = canvas.getContext("2d");
+
+            context.beginPath();
+            context.lineTo(20, 100);
+            context.lineTo(120, 200);
+            context.lineTo(220, 100);
+            context.stroke();
+        }
+    </script>
+
+</body>
+</html>

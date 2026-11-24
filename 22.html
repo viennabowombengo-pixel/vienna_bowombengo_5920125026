@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Radial Gradient</title>
+</head>
+<body>
+
+<canvas id="canvas" width="600" height="500"></canvas>
+
+<script>
+  window.onload = function() {
+var canvas = document.getElementById("canvas");
+var context = canvas.getContext("2d");
+
+var rg = context.createRadialGradient(350,300,80,360,250,80);
+
+rg.addColorStop(0, "#A7D30C");
+rg.addColorStop(0.9, "#019F62");
+rg.addColorStop(1, "rgba(1,159,98,0)");
+
+context.fillStyle = rg;
+
+context.fillRect(250,150,200,200);
+
+  }
+</script>
+
+</body>
+</html>

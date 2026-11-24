@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div itemscope itemtype="http://microformats.org/profile/hcard"> 
+<h2 itemprop="fn">William Adama</h2> 
+ <span itemprop="n" item> 
+  <strong>Rank:</strong> <span itemprop="honorific-prefix">Admiral</
+span><br> 
+  <strong>Nicknames:</strong><br>  
+   <span itemprop="nickname">Bill</span><br> 
+ </span> 
+ <strong>Location: </strong> 
+ <span itemprop="adr" item> 
+   <span itemprop="region">Earth</span><br> 
+ </span> 
+</div>
+It is possible to have duplicate entries with the same itemprop name and different values:
+<div itemscope itemtype="http://microformats.org/profile/hcard"> 
+<h2 itemprop="fn">William Adama</h2> 
+<span itemprop="n" item> 
+<strong>Nicknames:</strong><br>  
+  <span itemprop="nickname">Bill</span><br> 
+  <span itemprop="nickname">Old Man</span><br> 
+  <span itemprop="nickname">Husker</span><br> 
+</span> 
+</div>
+</body>
+</html>
