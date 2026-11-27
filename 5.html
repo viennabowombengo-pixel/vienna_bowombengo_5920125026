@@ -2,26 +2,35 @@
 <html> 
 <head> 
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
-<title>Document Header</title> 
+<title>CSS Animations - animation-iteration-count</title> 
+<style type="text/css">
+@-webkit-keyframes resize {
+from {height: 300px; width: 100px; 
+      left: 0; top: 0;} 
+50%  {height: 100px; width: 100px; 
+      left: 300px; top: 0;} 
+to   {height: 100px; width: 300px; 
+      left: 300px; top: 300px;} 
+} 
+@-webkit-keyframes move { 
+from {left: 150px; top: 150px;}
+50%  {left: 300px; top: 0;} 
+to   {left: 400px; top: 200px;} 
+} 
+#anim1 {-webkit-animation-name:resize; 
+        -webkit-animation-duration: 4s; 
+        -webkit-animation-iteration-count: infinite; 
+        position:absolute; 
+        background-color: purple;}
+#anim2 {-webkit-animation-name:move; 
+        -webkit-animation-duration: 4s; 
+        -webkit-animation-iteration-count: 2; 
+        position:absolute; top: 150px; left: 150px;  
+        background-color: orange;} 
+</style> 
 </head> 
 <body> 
- <header> 
-  <h1>Welcome to the Example</h1> 
-  <h2>The more exciting subheading</h2> 
-</header> 
- <p>Yes it is yet another boring example.</p> 
- <footer><p>&copy; 2010 Boring Examples, Inc.</p></footer> 
+<div id="anim1">Watch me move and change size forever!</div> 
+<div id="anim2">Watch me move two times</div> 
 </body> 
 </html>
-<!-- Simple section header --> 
-<section> 
- <header> 
-   <p>It was a dark and story night...</p> 
-   <h1>The Spooky Heading</h1> 
- </header> 
- <p>A fantastic story that is spooky would be found here. 
-If I weren't so busy writing HTML5 examples.</p> 
-<footer> 
- <p><cite>HTML: The Complete Reference</cite> &copy; 2010</p> 
-</footer> 
-</section>

@@ -2,17 +2,26 @@
 <html> 
 <head> 
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
-<title>Link Relationship Examples</title> 
-<link rel="home" href="http://htmlref.com" title="Homepage"> 
-<link rel="toc" href="http://htmlref.com/chapters/toc.html"  
-      title="Table of contents"> 
-<link rel="help" href="http://htmlref.com/help.html" title="Need help?"> 
-<link rel="copyright" href="http://www.htmlref.com/copyright.html" 
-title="Copyright statement"> 
-<link rel="author" href="http://htmlref.com/about/author.html"  
-      title="About the author"> 
+<title>behavior and binding Example</title> 
+<style type="text/css"> 
+ #clickable {behavior: url(hello.htc); -moz-binding: url(hello.xml);  
+             binding: url(hello.xml);} 
+</style> 
 </head> 
 <body> 
-<p>Testing link element rel values</p> 
+<p>Just a regular paragraph.</p> 
+<p id="clickable">I'm special click me.</p> 
+<p>Just a regular paragraph.</p> 
 </body> 
 </html>
+The bound XBL file (hello.xml) looks like this:
+<?xml version="1.0" encoding="utf-8"?> 
+<bindings xmlns="http://www.mozilla.org/xbl" 
+ xmlns:html="http://www.w3.org/1999/xhtml"> 
+  <binding id="hello"> 
+    <handlers> 
+          <handler event="click" action= 
+"alert('Hello world from the bound XBL')" /> 
+      </handlers> 
+  </binding> 
+</bindings>

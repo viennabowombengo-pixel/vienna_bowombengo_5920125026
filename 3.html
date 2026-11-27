@@ -2,22 +2,32 @@
 <html> 
 <head> 
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
-<title>Document Footer</title> 
+<title>CSS Animations - animation-delay</title> 
+<style type="text/css"> 
+@-webkit-keyframes move { 
+from {width: 100px; height: 300px; 
+      left: 0; top: 0;} 
+50%  {width: 100px; height: 300px; 
+      left: 300px; top: 0;} 
+to   {width: 100px; height: 300px; 
+      left: 300px; top: 300px;} 
+} 
+@-webkit-keyframes resize { 
+from {width: 100px; height: 300px; 
+      left: 300px; top: 300px;} 
+50%  {width: 100px; height: 100px; 
+      left: 300px; top: 300px;} 
+to   {width: 300px; height: 100px; 
+      left: 300px; top: 300px;} 
+} 
+#anim1 {-webkit-animation-name:move, resize; 
+        -webkit-animation-duration: 4s, 4s; 
+        -webkit-animation-delay: 0s, 4s; 
+        position:absolute; 
+        background-color: purple;} 
+</style> 
 </head> 
 <body> 
- <header><h1>Welcome to the Example</h1></header> 
- <p>Yes it is another boring example.</p> 
- <footer><p>&copy; 2010 Boring Examples, Inc.</p></footer>
- </body> 
+<div id="anim1">Watch me move and change size!</div> 
+</body> 
 </html>
-<!-- Simple section footer --> 
-<section> 
- <header> 
-<h1>Section Heading</h1> 
- </header> 
- <p>Section Body</p> 
- <p>More Body</p> 
-<footer> 
- <p>Boring Example &copy; 2010</p> 
-</footer> 
-</section>

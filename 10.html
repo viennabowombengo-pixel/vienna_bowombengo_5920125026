@@ -2,9 +2,28 @@
 <html> 
 <head> 
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
-<title>Web Application</title> 
-<!-- require script on --> 
-<noscript> 
-<meta http-equiv="Refresh" content="0;URL=/errors/noscript.html">  
-</noscript> 
-<!-- more head content follows -->
+<title>filter - transitions Example</title> 
+<meta http-equiv="X-UA-Compatible" content="IE=7"> 
+<style type="text/css" media="screen"> 
+div {padding: 30px;} 
+#rd{filter:progid:DXImageTransform.Microsoft.RandomDissolve(duration=4);}  
+</style> 
+<script type="text/javascript">
+window.onload = function () {  
+   document.getElementById("rd").filters[0].Apply(); 
+   document.getElementById("rdimage1").style.visibility = "hidden"; 
+   document.getElementById("rdimage2").style.visibility = "visible"; 
+   document.getElementById("rd").filters[0].play(); 
+}; 
+</script> 
+<body> 
+<h2>Random Dissolve</h2> 
+<div id="rd" style="position:absolute; top: 50px; left: 10px; height: 
+250px; width: 175px;">
+<img src="tucker.jpg" id="rdimage1" width="200" height="133" 
+style="position:absolute;top:0px;left:0px;">
+<img src="angus.jpg" id="rdimage2" width="200" height="133" 
+style="visibility:hidden;position:absolute;top:0px;left:0px;"> 
+</div> 
+</body> 
+</html>

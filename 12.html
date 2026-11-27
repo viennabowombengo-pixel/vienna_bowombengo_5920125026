@@ -1,18 +1,16 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/
-html4/strict.dtd"> 
+<!DOCTYPE html> 
 <html> 
 <head> 
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
-<title>Simple Style Element Example</title> 
+<title>mask-size Example</title> 
 <style type="text/css"> 
-   body {background: black; color: white;  
-         font: 12px Helvetica;} 
-   h1 {color: red; font: 14px Impact;} 
+img.masked {-webkit-mask-image: url(starmask3.png);} 
 </style> 
 </head> 
 <body> 
-<h1>A 14-pixel red Impact heading on a black  
-background</h1> 
-<p>Regular body text, which is 12 pixel white Helvetica.</p> 
-</body> 
+<img src="tucker.jpg" width="200" height="133"  
+     class="masked"> 
+<img src="tucker.jpg" width="200" height="133" 
+class="mask-size" >
+</body>  
 </html>

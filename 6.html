@@ -1,30 +1,31 @@
 <!DOCTYPE html> 
 <html> 
 <head> 
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
-<title>hgroup Example</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>CSS Animations - animation-name</title> 
+<style type="text/css"> 
+@-webkit-keyframes move { 
+ from {top: 0; left:0; opacity: 1;} 
+ 50%  {top: 0; left:500px; opacity: .5;} 
+ to   {top: 500px; left: 500px; opacity: .1;} 
+} 
+@-webkit-keyframes resize { 
+ from {height: 300px; width: 100px;} 
+ 50%  {height: 100px; width: 100px;} 
+ to   {height: 100px; width: 300px;} 
+} 
+@-webkit-keyframes fade { 
+ from {opacity: 1;} 
+ 50%  {opacity: .5;} 
+ to   {opacity: .1;} 
+} 
+#anim1 {-webkit-animation-name: move, resize, fade; 
+        -webkit-animation-duration: 10s; 
+        position:absolute; 
+        background-color: purple;} 
+</style> 
 </head> 
 <body> 
-<header> 
- <hgroup> 
-  <h1>Welcome to the Example</h1> 
-  <h2>Clearly the best example you've seen</h2> 
- </hgroup> 
-<nav> 
- <ul> 
-  <li><a href="#">Link</a></li> 
-  <li><a href="#">Link</a></li> 
-  <li><a href="#">Link</a></li> 
-  <li><a href="#">Link</a></li> 
- </ul> 
-</nav> 
-</header> 
-  <hgroup> 
-   <h1>Section head</h1> 
-   <h2>A subhead</h2> 
- </hgroup> 
- <p>Ok here we go some content here.</p> 
- <p>More content goes here and here.</p> 
- <footer><p>&copy; 2010 Boring Examples, Inc.</p></footer> 
+<div id="anim1">Watch me move and vanish!</div> 
 </body> 
 </html>

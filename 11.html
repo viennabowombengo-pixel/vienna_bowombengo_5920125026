@@ -1,9 +1,23 @@
-<!DOCTYPE html PUBLIC "-//IETF//DTD HTML 2.0//EN"> 
+<!DOCTYPE html> 
 <html> 
-<head><title>Plaintext Example</title></head> 
+<head> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
+<title>mask-clip Example</title> 
+<style type="text/css"> 
+div {height: 50px; width: 150px; 
+     float: left;  
+     margin: 20px; padding: 20px; 
+     background-color: red; 
+     font: bold xx-large; 
+     border: 15px solid black; 
+     -webkit-mask-image: url(starmask.png); 
+     -webkit-mask-repeat: repeat; 
+     -webkit-mask-size: 20px 20px;} 
+</style> 
+</head> 
 <body> 
-   The rest of this file is in plain text. 
-<p>
-   Even though this is supposed to be <b>bold</b>, the tags still show. 
-   There is no way to turn plain text off once it is on.</p>
-   does nothing to help. Even </body> and </html> will show up.
+<div style="-webkit-mask-clip: content;">content</div> 
+<div style="-webkit-mask-clip: border;">border</div> 
+<div style="-webkit-mask-clip: padding;">padding</div> 
+</body> 
+</html

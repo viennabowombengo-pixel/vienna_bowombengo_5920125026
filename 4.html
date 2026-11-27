@@ -1,25 +1,26 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/
-html4/strict.dtd"> 
+<!DOCTYPE html> 
 <html> 
 <head> 
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
-<title>Form Test</title> 
+<title>CSS Animations - animation-direction</title> 
+<style type="text/css"> 
+@-webkit-keyframes resize { 
+from {width: 100px; height: 300px; 
+      left: 0; top: 0;} 
+50%  {width: 100px; height: 100px; 
+      left: 300px; top: 0;} 
+to   {width: 300px;height: 100px; 
+      left: 300px; top: 300px;} 
+} 
+#anim1 {-webkit-animation-name:resize; 
+        -webkit-animation-duration: 4s; 
+        -webkit-animation-iteration-count: 5; 
+        -webkit-animation-direction: alternate; 
+        position:absolute; 
+        background-color: purple;} 
+</style> 
 </head> 
 <body> 
-<form action="dosomething.php" 
-      method="post" name="testform" onsubmit="return validate();"> 
-<div> 
- <label><strong>Username:</strong> 
-  <input type="text" name="username"> 
- </label> 
- <br> 
- <label><strong>Comments:</strong> 
-   <textarea name="comments" cols="30" rows="8"></textarea> 
- </label> 
- <br> 
- <input type="submit" value="send"> 
- <input type="reset" value="clear"> 
-</div> 
-</form> 
+<div id="anim1">Watch me move and change size!</div> 
 </body> 
 </html>
